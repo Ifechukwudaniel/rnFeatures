@@ -3,7 +3,7 @@ import {StyleSheet ,View, Text,Button} from "react-native"
 
 class HomeScreen extends Component {
     static navigationOptions={
-        title: 'Home',
+    //   title:"CS"
     }
   render() {
     return (

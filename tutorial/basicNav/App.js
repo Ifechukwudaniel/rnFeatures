@@ -7,7 +7,10 @@ import UserScreen from "./src/User"
 
 const appNavigation = createStackNavigator({
   Home:{
-    screen:HomeScreen
+    screen:HomeScreen,
+    navigationOptions:({ navigation})=>({
+      title:"Home"
+    })
   },
   Users:{
     screen:UserScreen
