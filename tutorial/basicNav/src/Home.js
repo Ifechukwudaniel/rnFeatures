@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import {StyleSheet ,View, Text,Button} from "react-native"
 
 class HomeScreen extends Component {
-    static navigationOptions={
-    //   title:"CS"
+    static navigationOptions= ({navigation})=>{
+     return{
+         headerLeft:(
+             <Button title="B" onPress={()=>navigation.navigate('Users')}/>
+         ),
+         headerRight:(
+             <Button title="X" onPress={()=>navigation.navigate('Users')}/>
+         )
+     }
     }
   render() {
+    console.log(this.props)
     return (
         <View style={styles.mainView}>
             <Text> Home Screen </Text>
