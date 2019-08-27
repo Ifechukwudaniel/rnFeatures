@@ -13,7 +13,19 @@ const appNavigation = createStackNavigator({
     screen:UserScreen
   }
 }, {
-  initialRouteName: 'Home'
+  initialRouteName: 'Home',
+  defaultNavigationOptions:{
+    headerTitleStyle:{
+      textAlign:"center",
+      flex:1,
+      fontWeight:"bold"
+    },
+    headerStyle:{
+      backgroundColor: "#333aaa",
+  },
+    headerTintColor:"#ffffff",
+  },
+  
 })
 
 

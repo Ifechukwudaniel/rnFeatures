@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {StyleSheet ,View, Text,Button} from "react-native"
 
 class HomeScreen extends Component {
+    static navigationOptions={
+        title: 'Home',
+    }
   render() {
     return (
         <View style={styles.mainView}>

@@ -6,12 +6,12 @@ class UserScreen extends Component {
     static navigationOptions={
         title: 'Users',
         headerStyle:{
-            backgroundColor: "#333aaa",
+            backgroundColor: "#433530",
         },
         headerTintColor:"#ffffff",
         headerTitleStyle:{
-            color:"#ffffff",
-            fontSize: 20,
+            flex:1,
+            fontWeight:"bold",
         }
     }
   render() {
