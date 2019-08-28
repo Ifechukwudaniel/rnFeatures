@@ -22,7 +22,7 @@ class UserScreen extends Component {
             <Text> User Screen </Text>
             {/* <Text>{userName} </Text>
             <Text>{userLastName} </Text> */}
-            <Button title="Open Side Drawer" onPress={()=>this.props.navigation.openDrawer()}/>
+            <Button title="Open Side Drawer" onPress={()=>this.props.navigation.navigate("Home")}/>
         </View>
        );
   }

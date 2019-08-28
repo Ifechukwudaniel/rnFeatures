@@ -66,7 +66,30 @@ const appNavigation= createBottomTabNavigator({
   Users:UserScreen
 },{
   initialRouteName:"Users",
-  
+   order:["Users", "Home"],
+   tabBarOptions:{
+    //  activeBackgroundColor:"#dbdbdb",
+    //  activeTintColor:"red",
+     showLabel:true,
+     allowFontScaling:true,
+     style:{
+       backgroundColor: "green",
+     },
+     labelStyle:{
+       fontSize: 20,
+     },
+   },
+   defaultNavigationOptions:({})=>({
+     tabBarOnPress:({navigation,defaultHandler})=>{
+       if(navigation.state.routeName==="Home"){
+         alert("Do You what to Leave")
+         navigation.navigate("Home")
+       }
+       else{
+       defaultHandler()          
+       }
+     }  
+  })
 })
 
 
