@@ -120,8 +120,14 @@ const OuterStack = createStackNavigator({
   Users:UserScreen
 })
 
-const appNavigation= createBottomTabNavigator({
-    Home:HomeStack,
-    Setting:OuterStack
+// const appNavigation= createBottomTabNavigator({
+//     Home:HomeStack,
+//     Setting:OuterStack
+// })
+const appNavigation= createDrawerNavigator({
+  Home:HomeStack,
+  Setting:OuterStack
 })
+
+
 export default createAppContainer(appNavigation);

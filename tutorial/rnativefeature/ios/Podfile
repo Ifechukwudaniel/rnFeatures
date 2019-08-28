@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'basicNav' do
-  # Pods for basicNav
+target 'rnativefeature' do
+  # Pods for rnativefeature
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -27,9 +27,7 @@ target 'basicNav' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
-
-  target 'basicNavTests' do
+  target 'rnativefeatureTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -37,10 +35,10 @@ target 'basicNav' do
   use_native_modules!
 end
 
-target 'basicNav-tvOS' do
-  # Pods for basicNav-tvOS
+target 'rnativefeature-tvOS' do
+  # Pods for rnativefeature-tvOS
 
-  target 'basicNav-tvOSTests' do
+  target 'rnativefeature-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
