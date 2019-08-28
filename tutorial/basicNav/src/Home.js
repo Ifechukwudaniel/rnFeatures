@@ -23,7 +23,7 @@ class HomeScreen extends Component {
     return (
         <View style={styles.mainView}>
             <Text> Home Screen </Text>
-        <Button title="Open Drawer" onPress={()=>this.props.navigation.openDrawer()}/>
+        <Button title="Open Drawer" onPress={()=>this.props.navigation.navigate("Users")}/>
             {/* <Button title="go to uses" onPress={()=>{this.props.navigation.navigate("Users",{
                 userId:12,
                 userName:"daniel",
