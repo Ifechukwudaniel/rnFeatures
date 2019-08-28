@@ -7,6 +7,7 @@ import Logo from "./src/Logo"
 import SideDrawer from "./src/SideDrawer"
 import Icon from "./src/assets/images/download.jpg"
 import Icon2 from "./src/assets/images/Screenshot_1566912554.png"
+import SettingScreen from "./src/Setting"
 
 
 // const appNavigation = createStackNavigator({
@@ -109,5 +110,18 @@ import Icon2 from "./src/assets/images/Screenshot_1566912554.png"
 //   })
 // })
 
+const HomeStack= createStackNavigator({
+  Home:HomeScreen,
+  Users:UserScreen
+})
 
+const OuterStack = createStackNavigator({
+  Setting:SettingScreen,
+  Users:UserScreen
+})
+
+const appNavigation= createBottomTabNavigator({
+    Home:HomeStack,
+    Setting:OuterStack
+})
 export default createAppContainer(appNavigation);
