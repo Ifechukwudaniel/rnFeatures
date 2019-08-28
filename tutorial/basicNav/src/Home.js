@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
-import {StyleSheet ,View, Text,Button} from "react-native"
+import {StyleSheet ,View, Text,Button,TouchableOpacity} from "react-native"
+import {DrawerActions} from "react-navigation"
+import Logo from "./Logo"
 
 class HomeScreen extends Component {
-    static navigationOptions= ({navigation})=>{
-     return{
-         headerLeft:(
-             <Button title="B" onPress={()=>navigation.navigate('Users')}/>
-         ),
-         headerRight:(
-             <Button title="X" onPress={()=>navigation.navigate('Users')}/>
-         )
-     }
-    }
+    // static navigationOptions={
+    //     drawerLabel:"Test",
+    //     drawerIcon:(<Logo/>)
+    // }
+    // // static navigationOptions= ({navigation})=>{
+    // //  return{
+    // //      headerLeft:(
+    // //          <Button title="B" onPress={()=>navigation.navigate('Users')}/>
+    // //      ),
+    // //      headerRight:(
+    // //          <Button title="X" onPress={()=>navigation.navigate('Users')}/>
+    // //      )
+    // //  }
+    // // }
   render() {
     console.log(this.props)
     return (
         <View style={styles.mainView}>
             <Text> Home Screen </Text>
-            <Button title="go to uses" onPress={()=>{this.props.navigation.navigate("Users",{
+        <Button title="Open Drawer" onPress={()=>this.props.navigation.openDrawer()}/>
+            {/* <Button title="go to uses" onPress={()=>{this.props.navigation.navigate("Users",{
                 userId:12,
                 userName:"daniel",
                 userLastName:"sonia"
-            })}}/>
+            })}}/> */}
         </View>
        );
   }

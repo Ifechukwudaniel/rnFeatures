@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {StyleSheet ,View, Text, Button
-} from "react-native"
+import {StyleSheet ,View, Text, Button} from "react-native"
+import {DrawerActions} from 'react-navigation'
 
 class UserScreen extends Component {
     static navigationOptions={
@@ -15,14 +15,14 @@ class UserScreen extends Component {
         }
     }
   render() {
-    const userName = this.props.navigation.getParam("userName", "N/A")
-    const userLastName = this.props.navigation.getParam("userLastName")
+    // const userName = this.props.navigation.getParam("userName", "N/A")
+    // const userLastName = this.props.navigation.getParam("userLastName")
     return ( 
         <View style={styles.mainView}>
             <Text> User Screen </Text>
-            <Text>{userName} </Text>
-            <Text>{userLastName} </Text>
-            <Button title="go to home" onPress={()=> this.props.navigation.navigate("Home")}/>
+            {/* <Text>{userName} </Text>
+            <Text>{userLastName} </Text> */}
+            <Button title="Open Side Drawer" onPress={()=>this.props.navigation.openDrawer()}/>
         </View>
        );
   }
